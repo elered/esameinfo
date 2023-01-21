@@ -161,7 +161,7 @@ double CalcolaVarianza(const vector<evento> &v) {
   for (int i = 0; i < v.size(); i++) {
     sommascarti += pow(v[i].massainv - CalcolaMedia(v), 2);
   }
-  varianza = sommascarti / (v.size() - 1);
+  varianza = sommascarti / (v.size());
 
   return sqrt(varianza);
 };
