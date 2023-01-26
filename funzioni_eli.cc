@@ -162,3 +162,69 @@ fstream f;
      for(int i = 0; i < count; i++){
     
         f >> 
+            
+//NOSTRE FUNZIONI BELLE            
+            
+   int contatore(string const &filename) {
+
+    fstream f;
+    f.open(filename, ios::in);
+    if (!f.good()){
+        throw runtime_error("Problema con il file da leggere");
+    }
+
+    int ntot = 0;
+
+    string tmp;
+
+    for(;;){
+
+        getline(f,tmp);
+
+        if(f.eof())  {
+            
+            if(!tmp.empty()) {
+
+              ntot++;
+            }
+            
+            break;
+
+        }
+
+        if(tmp.empty()) {
+
+            continue;
+        }
+
+        ntot ++;
+
+    } 
+
+    return ntot;
+    
+}
+
+netpacket *load_data(string const &filename, int &ntot){          
+    
+    fstream f;
+    f.open(filename, ios::in);
+    if (!f.good()){
+        throw runtime_error("Problema con il file da leggere");
+    }
+
+
+    f.clear();
+    f.seekg(0);
+    
+    netpacket *read = new netpacket[ntot];
+    for (int i = 0; i<ntot; i++){
+        f >> read[i].time
+          >> read[i].db
+          >> read[i].data;
+
+          if(f.eof()) { break; };
+    }
+
+    return read;
+}
