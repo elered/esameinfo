@@ -1,0 +1,40 @@
+ORIENTARSI
+pwd per vedere in che directory sei
+ls  per vedere cosa ce'è dentro in dove sei tu
+
+
+NAVIGARE TRA DIRECTORY
+cd      entri
+cd ..   torni nella precedente
+
+cd ~/                           ci porta a casa    (~ si fa con Alt + 1 2 6)
+cp file directory              directory dove vuoi copiare il file
+cp -r directory directory2     copiare directory
+mv file nuovonome              rinominare file
+
+code                     codare un file :)
+git clone https...       clona cose belle da github
+cd informatica2021    -e poi-   git pull  (refresha i contenuti aggiornati)
+code file             dopo che sei entrata nella direcory, per leggere il file..           
+evince                per aprire PDF
+
+REMOTE COMANDS
+ssh username@tolab.fisica.unimi.it                                                 per loggarsi (exit per uscire)  //ssh = secure shell
+scp file elisa.sogno@tolab.fisica.unimi.it:/home/comune/risultati                 per copiare file da locale a remoto 
+scp -r  directory elisa.sogno@tolab.fisica.unimi.it:/home/comune/risultati        per copiare directory da locale a remoto 
+
+scp elisa.sogno@tolab.fisica.unimi.it:/home/elisasogno/lezione11/file.cc .        per copiare dalla macchina remota a quella locale (il . dice di copiare lì dove è aperto il mio terminale)
+scp -r elisa.sogno@tolab.fisica.unimi.it:/home/comune                             per le directory da remoto a locale
+
+ESAME
+creare cartella e fare tutto li:
+$ mkdir sogno_991136
+$ cd  sogno_991136
+$ scp elisa.sogno@tolab.fisica.unimi.it:/home/comune/data.dat .
+...lavori e fai tutto...
+
+consegna:
+$ cd ..
+$ 
+
+
